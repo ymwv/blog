@@ -7,13 +7,16 @@
   
   <title>用co酷酷的实现异步编程 | Jerry Gao</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="安装co1npm i co 这里会用到node端fetch的轻量级实现node-fetch，也要先安装一下1npm i node-fetch 使用co新建文件use_co.js 12345678910111213const co = require(&amp;apos;co&amp;apos;)const fetch = require(&amp;apos;node-fetch&amp;apos;)//co将promise对象执">
+<meta property="og:type" content="article">
 <meta property="og:title" content="用co酷酷的实现异步编程">
 <meta property="og:url" content="ymwv.github.io/2018/06/12/用co酷酷的实现异步编程/index.html">
 <meta property="og:site_name" content="Jerry Gao">
-<meta property="og:updated_time" content="2018-06-12T04:51:22.904Z">
+<meta property="og:description" content="安装co1npm i co 这里会用到node端fetch的轻量级实现node-fetch，也要先安装一下1npm i node-fetch 使用co新建文件use_co.js 12345678910111213const co = require(&amp;apos;co&amp;apos;)const fetch = require(&amp;apos;node-fetch&amp;apos;)//co将promise对象执">
+<meta property="og:updated_time" content="2018-06-12T05:32:01.561Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用co酷酷的实现异步编程">
+<meta name="twitter:description" content="安装co1npm i co 这里会用到node端fetch的轻量级实现node-fetch，也要先安装一下1npm i node-fetch 使用co新建文件use_co.js 12345678910111213const co = require(&amp;apos;co&amp;apos;)const fetch = require(&amp;apos;node-fetch&amp;apos;)//co将promise对象执">
   
     <link rel="alternate" href="/atom.xml" title="Jerry Gao" type="application/atom+xml">
   
@@ -82,11 +85,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h3 id="安装co"><a href="#安装co" class="headerlink" title="安装co"></a>安装co</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i co</span><br></pre></td></tr></table></figure>
+<p>这里会用到node端fetch的轻量级实现<code>node-fetch</code>，也要先安装一下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i node-fetch</span><br></pre></td></tr></table></figure></p>
+<h2 id="使用co"><a href="#使用co" class="headerlink" title="使用co"></a>使用co</h2><p>新建文件<code>use_co.js</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">const co = require(&apos;co&apos;)</span><br><span class="line">const fetch = require(&apos;node-fetch&apos;)</span><br><span class="line"></span><br><span class="line">//co将promise对象执行过程，用yield写成类似同步执行过程的代码</span><br><span class="line">co(function *() &#123;</span><br><span class="line">	//fetch返回异步的promise对象执行的结果</span><br><span class="line">	const res = yield fetch(&apos;https://api.github.com/users/github&apos;)</span><br><span class="line">	const info = yield res.json()</span><br><span class="line">	const updatedAt = info.updated_at</span><br><span class="line"></span><br><span class="line">	console.log(updatedAt)</span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>然后用终端进入<code>use_co.js</code>所在目录运行<code>node</code>测试</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node use_co.js</span><br></pre></td></tr></table></figure>
+<p>成功打印：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2018-06-09T04:09:39Z</span><br></pre></td></tr></table></figure></p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="ymwv.github.io/2018/06/12/用co酷酷的实现异步编程/" data-id="cjib7otwn000346qeime6ifgg" class="article-share-link">Teilen</a>
+      <a data-url="ymwv.github.io/2018/06/12/用co酷酷的实现异步编程/" data-id="cjib92z900003deqe5wd4bakz" class="article-share-link">Teilen</a>
       
       
     </footer>
