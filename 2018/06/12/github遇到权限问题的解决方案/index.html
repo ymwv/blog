@@ -5,18 +5,18 @@
   
 
   
-  <title>Jerry Gao</title>
+  <title>github遇到权限问题的解决方案 | Jerry Gao</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Hello World Hello github github遇到权限问题的解决方案我们在使用git clone 或其他命令的时候，有时候会遇到这类问题 Could not read from remote repository.Please make sure you have the correct access rights. 提示的是没有访问权限  然后我查看官方文档生成新的SSH ke">
+  <meta name="description" content="我们在使用git clone 或其他命令的时候，有时候会遇到这类问题 Could not read from remote repository.Please make sure you have the correct access rights. 提示的是没有访问权限  然后我查看官方文档生成新的SSH key 并添加到ssh-agent解决了这个问题  这里跳过生成ssh-key的部分翻译一">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Jerry Gao">
-<meta property="og:url" content="ymwv.github.io/2018/06/07/github遇到问题权限问题/index.html">
+<meta property="og:title" content="github遇到权限问题的解决方案">
+<meta property="og:url" content="ymwv.github.io/2018/06/12/github遇到权限问题的解决方案/index.html">
 <meta property="og:site_name" content="Jerry Gao">
-<meta property="og:description" content="Hello World Hello github github遇到权限问题的解决方案我们在使用git clone 或其他命令的时候，有时候会遇到这类问题 Could not read from remote repository.Please make sure you have the correct access rights. 提示的是没有访问权限  然后我查看官方文档生成新的SSH ke">
-<meta property="og:updated_time" content="2018-06-12T04:41:51.834Z">
+<meta property="og:description" content="我们在使用git clone 或其他命令的时候，有时候会遇到这类问题 Could not read from remote repository.Please make sure you have the correct access rights. 提示的是没有访问权限  然后我查看官方文档生成新的SSH key 并添加到ssh-agent解决了这个问题  这里跳过生成ssh-key的部分翻译一">
+<meta property="og:updated_time" content="2018-06-12T04:47:12.455Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jerry Gao">
-<meta name="twitter:description" content="Hello World Hello github github遇到权限问题的解决方案我们在使用git clone 或其他命令的时候，有时候会遇到这类问题 Could not read from remote repository.Please make sure you have the correct access rights. 提示的是没有访问权限  然后我查看官方文档生成新的SSH ke">
+<meta name="twitter:title" content="github遇到权限问题的解决方案">
+<meta name="twitter:description" content="我们在使用git clone 或其他命令的时候，有时候会遇到这类问题 Could not read from remote repository.Please make sure you have the correct access rights. 提示的是没有访问权限  然后我查看官方文档生成新的SSH key 并添加到ssh-agent解决了这个问题  这里跳过生成ssh-key的部分翻译一">
   
     <link rel="alternate" href="/atom.xml" title="Jerry Gao" type="application/atom+xml">
   
@@ -63,20 +63,29 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-github遇到问题权限问题" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-github遇到权限问题的解决方案" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/06/07/github遇到问题权限问题/" class="article-date">
-  <time datetime="2018-06-07T06:26:12.245Z" itemprop="datePublished">2018-06-07</time>
+    <a href="/2018/06/12/github遇到权限问题的解决方案/" class="article-date">
+  <time datetime="2018-06-12T04:46:51.000Z" itemprop="datePublished">2018-06-12</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      github遇到权限问题的解决方案
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<h2 id="Hello-World-Hello-github-github遇到权限问题的解决方案"><a href="#Hello-World-Hello-github-github遇到权限问题的解决方案" class="headerlink" title="Hello World Hello github github遇到权限问题的解决方案"></a>Hello World Hello github github遇到权限问题的解决方案</h2><p>我们在使用git clone 或其他命令的时候，有时候会遇到这类问题<br> <code>Could not read from remote repository.Please make sure you have the correct access rights.</code><br> 提示的是没有访问权限</p>
+        <p>我们在使用git clone 或其他命令的时候，有时候会遇到这类问题<br> <code>Could not read from remote repository.Please make sure you have the correct access rights.</code><br> 提示的是没有访问权限</p>
 <p> 然后我查看官方文档<a href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/" target="_blank" rel="noopener">生成新的SSH key 并添加到ssh-agent</a>解决了这个问题</p>
 <p> 这里跳过生成ssh-key的部分翻译一下添加SSH key 的内容。</p>
 <h3 id="添加你的ssh-key到ssh-agent"><a href="#添加你的ssh-key到ssh-agent" class="headerlink" title="添加你的ssh key到ssh-agent"></a>添加你的ssh key到ssh-agent</h3><p>再添加新的ssh key到ssh-agent 来管理你的key之前，你应该先<a href="https://help.github.com/articles/checking-for-existing-ssh-keys" target="_blank" rel="noopener">检查已经存在的key</a>和<a href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key" target="_blank" rel="noopener">生成新的SSH key</a>。添加ssh key到代理(agent)的时候要用默认的 mac命令行工具的ssh-add命令，不要用如 <a href="https://www.macports.org/" target="_blank" rel="noopener">macports</a>, <a href="http://brew.sh/" target="_blank" rel="noopener">homebrew</a>, 等其他的的工具.</p>
@@ -89,7 +98,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="ymwv.github.io/2018/06/07/github遇到问题权限问题/" data-id="cjib7b1ob000000qeizf2686t" class="article-share-link">Teilen</a>
+      <a data-url="ymwv.github.io/2018/06/12/github遇到权限问题的解决方案/" data-id="cjib7gocu00001sqei08w33dr" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -138,7 +147,7 @@
       <ul>
         
           <li>
-            <a href="/2018/06/07/github遇到问题权限问题/">(no title)</a>
+            <a href="/2018/06/12/github遇到权限问题的解决方案/">github遇到权限问题的解决方案</a>
           </li>
         
           <li>
